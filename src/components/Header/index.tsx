@@ -31,9 +31,9 @@ export const Header:React.FC = () => {
                         <div>
                             <UserAreaNavLinks>
                                 <ul>
-                                    <li><a href=""> Olá, visitante! </a></li>
-                                    <li><a href=""> Nossas lojas </a></li>
-                                    <li><a href=""> Carrinho </a></li>
+                                    <li><a href="/"> Olá, visitante! </a></li>
+                                    <li><a href="/"> Nossas lojas </a></li>
+                                    <li><a href="/"> Carrinho </a></li>
                                 </ul>
                             </UserAreaNavLinks>
                         </div>
@@ -50,11 +50,11 @@ export const Header:React.FC = () => {
                         </div>
                         <HeaderNavLinks>
                             <ul>
-                                <li><a href=""> Shop </a></li>
-                                <li><a href=""> Blog </a></li>
-                                <li><a href=""> Equipe </a></li>
-                                <li><a href=""> Vídeos </a></li>
-                                <li><a href=""> História </a></li>
+                                <li><a href="/"> Shop </a></li>
+                                <li><a href="/"> Blog </a></li>
+                                <li><a href="/"> Equipe </a></li>
+                                <li><a href="/"> Vídeos </a></li>
+                                <li><a href="/"> História </a></li>
                             </ul>
                         </HeaderNavLinks>
                     </FlexBetweenBox>
