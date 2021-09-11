@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 
 import {
     Container,
@@ -12,11 +12,18 @@ import {
     WarningTop
 } from './styles';
 import Logo from '../../assets/logo-element-black.png';
+import LogoFemale from '../../assets/logo-element-female.png';
 import { Center } from '../Layout/styles';
-import {MyContext} from '../../contexts/MyContext';
+import {ThemeContext} from '../../contexts/ThemeContext';
 
 export const Header:React.FC = () => {
-    const {counter, increment} = useContext(MyContext);
+    const {themeName, setThemeName} = useContext(ThemeContext);
+    const [currentLogo, setCurrentLogo ] = useState<string>(Logo);
+
+    useEffect(() => {
+        setCurrentLogo( themeName === 'male' ? Logo : LogoFemale)
+    }, [themeName]);
+
     return (
         <Container>
             <WarningTop>
@@ -30,10 +37,9 @@ export const Header:React.FC = () => {
                 <Center>
                     <UserAreaNav>
                         <div>
-                            <UserAreaNavButton onClick={() => {}} > Masculino </UserAreaNavButton>
-                            <UserAreaNavButton onClick={() => {}} > Feminino </UserAreaNavButton>
-                            <button onClick={() => increment()}> incrementar </button>
-                            <p style={{color: "#fff"}} >Valor contador: {counter}</p>
+                            <UserAreaNavButton onClick={() => setThemeName("male") } > Masculino </UserAreaNavButton>
+                            <UserAreaNavButton onClick={() => setThemeName("female") } > Feminino </UserAreaNavButton>
+                            <p style={{color: "#fff"}} >Tema atual: {themeName}</p>
                         </div>
                         <div>
                             <UserAreaNavLinks>
@@ -52,7 +58,7 @@ export const Header:React.FC = () => {
                     <FlexBetweenBox>
                         <div>
                             <a href="/">
-                                <img src={Logo} alt="Logo Element" />
+                                <img src={currentLogo} alt="Logo Element" />
                             </a>
                         </div>
                         <HeaderNavLinks>
@@ -69,5 +75,4 @@ export const Header:React.FC = () => {
             </HeaderNav>
         </Container>
     )
-
 }

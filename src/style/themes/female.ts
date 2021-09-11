@@ -1,3 +1,5 @@
+import {Colors} from '.'
+
 const PALLETE = {
     white: '#fff',
     doveGray: '#949597',
@@ -7,7 +9,7 @@ const PALLETE = {
     silverChalice: '#a8a8a8'
 }
 
-export const LightTheme = {
+export const Female:Colors = {
     name: 'female',
     headerNavBg: PALLETE.white,
     headerNavLinks: PALLETE.doveGray,

@@ -1,3 +1,5 @@
+import {Colors} from './';
+
 const PALLETE = {
     white: '#fff',
     black100: '#242424',
@@ -6,7 +8,7 @@ const PALLETE = {
     tundora: '#403F3F'
 }
 
-export const ThemeDefault = {
+export const Male:Colors = {
     name: 'male',
     headerNavBg: PALLETE.black200,
     headerNavLinks: PALLETE.white,
