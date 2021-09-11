@@ -1,3 +1,5 @@
+import { useContext, useState } from 'react';
+
 import {
     Container,
     FlexBetweenBox,
@@ -9,9 +11,12 @@ import {
     UserAreaNavLinks,
     WarningTop
 } from './styles';
+import Logo from '../../assets/logo-element-black.png';
 import { Center } from '../Layout/styles';
+import {MyContext} from '../../contexts/MyContext';
 
 export const Header:React.FC = () => {
+    const {counter, increment} = useContext(MyContext);
     return (
         <Container>
             <WarningTop>
@@ -25,8 +30,10 @@ export const Header:React.FC = () => {
                 <Center>
                     <UserAreaNav>
                         <div>
-                            <UserAreaNavButton> Masculino </UserAreaNavButton>
-                            <UserAreaNavButton> Feminino </UserAreaNavButton>
+                            <UserAreaNavButton onClick={() => {}} > Masculino </UserAreaNavButton>
+                            <UserAreaNavButton onClick={() => {}} > Feminino </UserAreaNavButton>
+                            <button onClick={() => increment()}> incrementar </button>
+                            <p style={{color: "#fff"}} >Valor contador: {counter}</p>
                         </div>
                         <div>
                             <UserAreaNavLinks>
@@ -44,9 +51,9 @@ export const Header:React.FC = () => {
                 <Center>
                     <FlexBetweenBox>
                         <div>
-                            <h1>
-                            Logo
-                            </h1>
+                            <a href="/">
+                                <img src={Logo} alt="Logo Element" />
+                            </a>
                         </div>
                         <HeaderNavLinks>
                             <ul>

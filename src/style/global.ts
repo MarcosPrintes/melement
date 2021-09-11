@@ -25,4 +25,10 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         text-underline-offset: 2px;
     }
+
+    ul, ol {
+        li {
+            list-style: none;
+        }
+    }
 `;
