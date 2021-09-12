@@ -36,9 +36,13 @@ export const UserAreaNav = styled(FlexBetweenBox)`
     }
 `;
 
-export const UserAreaNavButton =  styled.button`
-    background: ${props => props.theme.userAreaBgButton};
-    color: ${props => props.theme.userAreaLinks};
+interface ThemeNameProps {
+    readonly isActive:boolean
+}
+
+export const UserAreaNavButton =  styled.button<ThemeNameProps>`
+    background: ${props => props.isActive ? props.theme.userAreaLinks : props.theme.userAreaBgButton};
+    color: ${props => props.isActive ? props.theme.userAreaBgButton : props.theme.userAreaLinks};
     border-radius: 4px;
     padding: 10px 15px;
     border: none;

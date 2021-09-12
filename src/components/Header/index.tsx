@@ -37,9 +37,8 @@ export const Header:React.FC = () => {
                 <Center>
                     <UserAreaNav>
                         <div>
-                            <UserAreaNavButton onClick={() => setThemeName("male") } > Masculino </UserAreaNavButton>
-                            <UserAreaNavButton onClick={() => setThemeName("female") } > Feminino </UserAreaNavButton>
-                            <p style={{color: "#fff"}} >Tema atual: {themeName}</p>
+                            <UserAreaNavButton isActive={themeName === 'male'} onClick={() => setThemeName("male") } > Masculino </UserAreaNavButton>
+                            <UserAreaNavButton isActive={themeName === 'female'} onClick={() => setThemeName("female") } > Feminino </UserAreaNavButton>
                         </div>
                         <div>
                             <UserAreaNavLinks>
