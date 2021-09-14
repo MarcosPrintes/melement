@@ -8,19 +8,19 @@ export const Container = styled.header`
 `
 
 export const WarningTop = styled.div`
-    background: ${props => props.theme.warningTopBg};
+    background: ${props => props.theme.colors.error};
     padding: 5px 0;
 
     span {
         display: block;
-        color: ${props => props.theme.warningTopText};
+        color: ${props => props.theme.colors.onError};
         text-align: center;
         font-size: 1.4rem;
     }
 `;
 
 export const UserArea =  styled.div`
-    background: ${props => props.theme.userAreaBg};
+    background: ${props => props.theme.colors.primaryLight};
     padding: 10px;
 `;
 
@@ -41,8 +41,8 @@ interface ThemeNameProps {
 }
 
 export const UserAreaNavButton =  styled.button<ThemeNameProps>`
-    background: ${props => props.isActive ? props.theme.userAreaLinks : props.theme.userAreaBgButton};
-    color: ${props => props.isActive ? props.theme.userAreaBgButton : props.theme.userAreaLinks};
+    background: ${props => props.isActive ? props.theme.colors.background : props.theme.colors.primaryLight};
+    color: ${props => props.isActive ? props.theme.colors.onBackground : props.theme.colors.onPrimaryLight};
     border-radius: 4px;
     padding: 10px 15px;
     border: none;
@@ -51,8 +51,8 @@ export const UserAreaNavButton =  styled.button<ThemeNameProps>`
     transition: all .3s ease;
     &:hover {
         border: 1px solid rgba(255, 255, 255, .3);
-        color: ${props => props.theme.userAreaBgButton};
-        background: ${props => props.theme.userAreaLinks};
+        color: ${props => props.theme.colors.onSecondary};
+        background: ${props => props.theme.colors.secondary};
     }
 `;
 
@@ -62,12 +62,12 @@ export const UserAreaNavLinks =  styled.div`
         display: flex;
         li {
             a {
-                color: ${props => props.theme.userAreaLinks};
+                color: ${props => props.theme.colors.onSecondary};
                 font-size: 1.6rem;
                 transition: color .3s ease;
 
                 &:hover {
-                    color: ${props => props.theme.userAreaLinksHover};
+                    color: ${props => props.theme.colors.onSecondary};
                 }
             }
             &:not(:last-of-type) {
@@ -78,7 +78,7 @@ export const UserAreaNavLinks =  styled.div`
 `;
 
 export const HeaderNav = styled.div`
-    background: ${props => props.theme.headerNavBg};
+    background: ${props => props.theme.colors.primary};
     padding: 20px;
 `;
 
@@ -91,11 +91,11 @@ export const HeaderNavLinks = styled.nav`
         align-items: center;
         li {
             a {
-                color: ${props => props.theme.headerNavLinks};
+                color: ${props => props.theme.colors.onPrimary};
                 font-size: 1.7rem;
                 transition: color .3s ease;
                 &:hover {
-                    color: ${props => props.theme.userAreaLinksHover};
+                    color: ${props => props.theme.colors.onSecondary};
                 }
             }
 

@@ -1,22 +1,20 @@
-import {Colors} from '.'
+import {Colors, ThemeColors} from '.'
 
-const PALLETE = {
-    white: '#fff',
-    doveGray: '#949597',
-    black100: '#242424',
-    black200: '#000',
-    red: '#c41230',
-    silverChalice: '#a8a8a8'
+const PALLETE:ThemeColors = {
+    primary: '#ffffff',
+    primaryLight: '#949597',
+    secondary: '#a8a8a8',
+    onSecondary: '#ffffff',
+    background: '#ffffff',
+    surface: '',
+    error: '#c41230',
+    onPrimary: '#000000',
+    onBackground: '#000000',
+    onSurface: '',
+    onError: '#ffffff',
 }
 
-export const Female:Colors = {
+export const FemaleTheme:Colors = {
     name: 'female',
-    headerNavBg: PALLETE.white,
-    headerNavLinks: PALLETE.doveGray,
-    userAreaBg: PALLETE.doveGray,
-    userAreaBgButton: PALLETE.silverChalice,
-    userAreaLinks: PALLETE.white,
-    userAreaLinksHover: PALLETE.red,
-    warningTopBg: PALLETE.white,
-    warningTopText: PALLETE.doveGray,
+    colors: PALLETE,
 }

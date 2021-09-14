@@ -1,5 +1,5 @@
 import {createContext, useState, useEffect} from 'react';
-import {Male, Female} from '../style/themes';
+import {MaleTheme, FemaleTheme } from '../style/themes';
 import { ThemeProvider } from 'styled-components';
 
 interface ThemeData {
@@ -8,8 +8,8 @@ interface ThemeData {
 }
 
 const themes = {
-    male: Male,
-    female: Female
+    male: MaleTheme,
+    female: FemaleTheme
 }
 
 export const ThemeContext = createContext<ThemeData>({
@@ -19,7 +19,7 @@ export const ThemeContext = createContext<ThemeData>({
 
 export const ThemeContextProvider:React.FC = ({children}) => {
     const [themeName, setThemeName] = useState<'male' | 'female'>("male");
-    const [currentTheme, setCurrentTheme] = useState(Male)
+    const [currentTheme, setCurrentTheme] = useState(MaleTheme)
 
     useEffect(() => {
         setCurrentTheme(themes[themeName])

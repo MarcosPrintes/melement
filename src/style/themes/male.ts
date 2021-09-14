@@ -1,21 +1,21 @@
-import {Colors} from './';
+import {Colors, ThemeColors} from './';
 
-const PALLETE = {
-    white: '#fff',
-    black100: '#242424',
-    black200: '#000',
-    red: '#c41230',
-    tundora: '#403F3F'
+const PALLETE:ThemeColors = {
+    primary: '#000000',
+    primaryLight: '#262626',
+    onPrimary: '#ffffff',
+    onPrimaryLight: '#ffffff',
+    error: '#c41230',
+    secondary: '#403f3f',
+    onSecondary: '#7b7b7b',
+    background: '#ffffff',
+    onBackground: '#000000',
+    surface: '#ffffff',
+    onSurface: '#000000',
+    onError: '#ffffff'
 }
 
-export const Male:Colors = {
+export const MaleTheme:Colors = {
     name: 'male',
-    headerNavBg: PALLETE.black200,
-    headerNavLinks: PALLETE.white,
-    userAreaBg: PALLETE.black100,
-    userAreaLinks: PALLETE.white,
-    userAreaLinksHover: PALLETE.red,
-    userAreaBgButton: PALLETE.tundora,
-    warningTopBg: PALLETE.red,
-    warningTopText: PALLETE.white,
+    colors: PALLETE,
 }
