@@ -1,4 +1,5 @@
 import { Header } from '../Header';
+import { Footer } from '../Footer';
 import { Container, Center } from './styles';
 
 
@@ -11,6 +12,7 @@ const Layout:React.FC = ({ children }) => {
                     {children}
                 </Center>
             </Container>
+            <Footer />
         </>
     )
 }

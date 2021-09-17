@@ -1,0 +1,58 @@
+import { Container,CopyRight } from './styles';
+import { Center } from '../Layout/styles';
+
+export const Footer:React.FC = () => {
+    return (
+        <Container>
+            <Center>
+                <div className="footer__grid">
+                    <div className="footer__block">
+                        <div> Mapa do site </div>
+                        <nav>
+                            <ul>
+                                <li><a href="google.com"> Blog </a></li>
+                                <li><a href="google.com"> Equipe </a></li>
+                                <li><a href="google.com"> Vídeos </a></li>
+                                <li><a href="google.com"> Histórico </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div className="footer__block">
+                        <div> Central de ajuda </div>
+                        <nav>
+                            <ul>
+                                <li><a href="google.com"> Status do pedido </a></li>
+                                <li><a href="google.com"> Tabela de medidas </a></li>
+                                <li><a href="google.com"> Entregas </a></li>
+                                <li><a href="google.com"> Trocas e Devoluções </a></li>
+                                <li><a href="google.com"> Como comprar </a></li>
+                                <li><a href="google.com"> Perguntas frequentes </a></li>
+                                <li><a href="google.com"> Pagamentos e Segurança </a></li>
+                                <li><a href="google.com"> Termos e condições </a></li>
+                                <li><a href="google.com"> Política de privacidade </a></li>
+                                <li><a href="google.com"> Fale Conosco </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div className="footer__block">
+                        <p>
+                            Estamos nisso juntos. Uma mensagem do nosso time sobre o COVID-19. <a href="google.com"> Leia aqui</a>.
+                        </p>
+                    </div>
+                </div>
+            </Center>
+            <CopyRight>
+                <Center>
+                    <p>
+                        Copyright © Element, Todos os direitos reservados. <br />
+                        As fotos aqui veiculadas, logotipo e marca são de propriedade do site http://www.elementbrand.com.br. <br />
+                        É vetada a sua reprodução, total ou parcial, sem a expressa autorização da administradora do site. <br />
+                        Element Online Shop é uma empresa do grupo Boardriders do Brasil Comércio de Artigos Esportivos 
+                        Ltda - CNPJ: 04.912.235/0001-00 - Endereço: Rua Argemiro Rocha de Moraes, 
+                        322 - Bragança Paulista - SP - CEP 12922-670
+                    </p>
+                </Center>
+            </CopyRight>
+        </Container>
+    )
+}
