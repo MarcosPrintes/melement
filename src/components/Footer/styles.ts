@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-    padding: 30px 0;
+    padding: 30px 0 0;
     background-color: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.onPrimary};
     margin-top: 60px;
 
     .footer__grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        display: flex;
+        justify-content: space-between;
+        .footer__block {
+            width: calc(80% / 5);
+        }
     }
     .footer__block {
         > div {
@@ -46,6 +49,7 @@ export const CopyRight = styled.div`
     background-color: ${props => props.theme.colors.secondary};
     color: ${props => props.theme.colors.onSecondary};
     padding: 15px 0;
+    margin-top: 30px;
     p {
         font-size: 1.2rem
     }

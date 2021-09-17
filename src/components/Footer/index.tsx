@@ -39,6 +39,16 @@ export const Footer:React.FC = () => {
                             Estamos nisso juntos. Uma mensagem do nosso time sobre o COVID-19. <a href="google.com"> Leia aqui</a>.
                         </p>
                     </div>
+                    <div className="footer__block">
+                        <div> Contato </div>
+                        <p>
+                            Atendimento das 08h as 17h <br /> de 2ª a 6ª. Sábados, domingos <br /> e feriados não temos <br /> atendimento
+                            Exclusivo para compras <br /> online. (11) 3618-8600 <br /> sac@elementbrand.com
+                        </p>
+                    </div>
+                    <div className="footer__block">
+                        <div> Newsletter </div>
+                    </div>
                 </div>
             </Center>
             <CopyRight>

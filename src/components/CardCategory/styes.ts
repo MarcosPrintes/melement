@@ -4,7 +4,6 @@ export const Card = styled.a`
     background: ${props => props.theme.colors.background};
     width: 350px;
     height: 355px;
-    border: 1px solid #000;
     display: inline-flex;
     position: relative;
     .card__bottom {
