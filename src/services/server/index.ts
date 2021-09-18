@@ -30,7 +30,7 @@ export default function() {
           return `prod-${i}`;
         },
         tag: "Novo",
-        productName: faker.commerce.productName(),
+        productName:() => faker.commerce.productName(),
         price: faker.commerce.price(),
         parcels: "10x sem juros de R$ 37,99",
         promo: "à vista com até 5% de desconto",
@@ -40,8 +40,8 @@ export default function() {
         id(id: number) {
           return `cat-${id}`
         },
-        categoryTitle: faker.commerce.department(),
-        image: faker.image.sports(350, 355),
+        categoryTitle:() => faker.commerce.department(),
+        image: () => faker.image.sports(350, 355),
       })
     },
     seeds(server) {
