@@ -8,7 +8,6 @@ interface IProps {
         parcels: string;
         promo: string;
     }
-
 }
 
 export const CardProduct:React.FC<IProps> = ({product}) => {

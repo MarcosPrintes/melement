@@ -63,12 +63,12 @@ export const UserAreaNavLinks =  styled.div`
         display: flex;
         li {
             a {
-                color: ${props => props.theme.colors.onSecondary};
+                color: ${props => props.theme.colors.onPrimary};
                 font-size: 1.6rem;
                 transition: color .3s ease;
 
                 &:hover {
-                    color: ${props => props.theme.colors.onSecondary};
+                    color: ${props => props.theme.colors.onPrimary};
                 }
             }
             &:not(:last-of-type) {
@@ -79,7 +79,7 @@ export const UserAreaNavLinks =  styled.div`
 `;
 
 export const HeaderNav = styled.div`
-    background: ${props => props.theme.colors.primary};
+    background: ${props => props.theme.colors.secondary};
     padding: 20px;
 `;
 
@@ -92,7 +92,7 @@ export const HeaderNavLinks = styled.nav`
         align-items: center;
         li {
             a {
-                color: ${props => props.theme.colors.onPrimary};
+                color: ${props => props.theme.colors.onSecondary};
                 font-size: 1.7rem;
                 transition: color .3s ease;
                 &:hover {
