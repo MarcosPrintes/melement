@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const Card = styled.a`
     display: inline-block;
-
+    //overflow: hidden;
     width: 255px;
     height: 270px;
     position: relative;
     margin-bottom: 60px;
-
+    img {
+        max-width: 100%;
+    }
     .tag {
         display: inline-flex;
         padding: 3px 15px;

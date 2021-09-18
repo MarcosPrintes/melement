@@ -2,18 +2,19 @@ import { Card } from './styes';
 
 interface IProps {
     category: {
-        name: string;
-        url: string;
+        id: number,
+        categoryTitle: string,
+        image: string,
     }
 }
 
 export const CardCategory:React.FC<IProps> = ({ category }) => {
-    const {name, url} = category;
+    const { categoryTitle, image } = category;
     return (
-        <Card href={url}>
-            <img src="https://picsum.photos/id/1/350/355" alt={name} />
+        <Card href="#">
+            <img src={image} alt={categoryTitle} />
             <div className="card__bottom">
-                <span>{ name }</span>
+                <span>{ categoryTitle }</span>
             </div>
         </Card>
     )

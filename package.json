@@ -45,7 +45,9 @@
   },
   "devDependencies": {
     "@miragejs/graphql": "^0.1.13",
+    "@types/faker": "^5.5.8",
     "@types/styled-components": "^5.1.13",
+    "faker": "^5.5.3",
     "miragejs": "^0.1.41"
   }
 }
