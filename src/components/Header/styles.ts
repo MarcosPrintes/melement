@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.header`
     width: 100%;
     position: fixed;
@@ -62,11 +63,13 @@ export const UserAreaNavLinks =  styled.div`
     ul {
         display: flex;
         li {
-            a {
+            a, button {
                 color: ${props => props.theme.colors.onPrimary};
                 font-size: 1.6rem;
                 transition: color .3s ease;
-
+                border: none;
+                background: transparent;
+                cursor: pointer;
                 &:hover {
                     color: ${props => props.theme.colors.onPrimary};
                 }
@@ -87,9 +90,13 @@ export const HeaderNavLogo = styled.div`
 `;
 
 export const HeaderNavLinks = styled.nav`
+    display: flex;
+    align-items: center;
+
     ul {
         display: flex;
         align-items: center;
+        margin-right: 15px;
         li {
             a {
                 color: ${props => props.theme.colors.onSecondary};

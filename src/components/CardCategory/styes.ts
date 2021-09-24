@@ -20,4 +20,9 @@ export const Card = styled.a`
         font-size: 2rem;
         text-transform: uppercase;
     }
+
+    @media screen and (max-width: 1280px) {
+        width: 300px;
+        height: 305px;
+    }
 `;

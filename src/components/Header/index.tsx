@@ -1,5 +1,4 @@
 import { useContext, useState, useEffect } from 'react';
-
 import {
     Container,
     FlexBetweenBox,
@@ -11,10 +10,13 @@ import {
     UserAreaNavLinks,
     WarningTop
 } from './styles';
-import Logo from '../../assets/logo-element-black.png';
-import LogoFemale from '../../assets/logo-element-female.png';
+import { Input } from '../Input'
+import {ShoppingCart} from "@styled-icons/entypo/ShoppingCart";
 import { Center } from '../Layout/styles';
 import {ThemeContext} from '../../contexts/ThemeContext';
+
+import Logo from '../../assets/logo-element-black.png';
+import LogoFemale from '../../assets/logo-element-female.png';
 
 export const Header:React.FC = () => {
     const {themeName, setThemeName} = useContext(ThemeContext);
@@ -45,7 +47,7 @@ export const Header:React.FC = () => {
                                 <ul>
                                     <li><a href="/"> Olá, visitante! </a></li>
                                     <li><a href="/"> Nossas lojas </a></li>
-                                    <li><a href="/"> Carrinho </a></li>
+                                    <li><button onClick={() => alert("popup de carrinho em construção") }> <ShoppingCart size={12} /> Carrinho (0) </button></li>
                                 </ul>
                             </UserAreaNavLinks>
                         </div>
@@ -68,6 +70,7 @@ export const Header:React.FC = () => {
                                 <li><a href="/"> Vídeos </a></li>
                                 <li><a href="/"> História </a></li>
                             </ul>
+                            <Input />
                         </HeaderNavLinks>
                     </FlexBetweenBox>
                 </Center>

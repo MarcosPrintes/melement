@@ -19,7 +19,7 @@ export const CardProduct:React.FC<IProps> = ({product}) => {
             <div>
                 <img src={image} alt="Procut thumb" />
                 <div className="tag"> {tag} </div>
-                <button type="button"> Quickview </button>
+                <button onClick={() => alert("Em construção ...")} type="button"> Quickview </button>
             </div>
             <div>
                 <p className="card__title"> {productName} </p>

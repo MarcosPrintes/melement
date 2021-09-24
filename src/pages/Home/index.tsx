@@ -40,14 +40,14 @@ export const Home:React.FC = () => {
       <h1>Home</h1>
       <h1>Contador - HOME: <TextToTest>{themeName}</TextToTest> </h1>
       <p> Valor do hook:  {isOnline} </p>
-      <Grid columns={3}>
+      <Grid columns={3} columnsSm={2} columnsXs={1} >
           {
             categories.map(category => <CardCategory key={category.id} category={category} />)
           }
       </Grid>
           <SectionTitle title="Destaques" />
 
-      <Grid columns={4}>
+      <Grid columns={4} columnsMd={3} columnsSm={2} columnsXs={1}>
         {
           products?.map(prod =>  <CardProduct key={prod.id} product={prod} />)
         }
