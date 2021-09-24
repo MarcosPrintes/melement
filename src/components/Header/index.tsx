@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import {
     Container,
+    CloseMenu,
     FlexBetweenBox,
     HeaderNav,
     HeaderNavLinks,
@@ -8,12 +9,13 @@ import {
     UserAreaNav,
     UserAreaNavButton,
     UserAreaNavLinks,
+    SandwichMenu,
     WarningTop
 } from './styles';
 import { Input } from '../Input'
-import {ShoppingCart} from "@styled-icons/entypo/ShoppingCart";
+import { ThemeContext } from '../../contexts/ThemeContext';
+import { ShoppingCart } from '@styled-icons/entypo/ShoppingCart';
 import { Center } from '../Layout/styles';
-import {ThemeContext} from '../../contexts/ThemeContext';
 
 import Logo from '../../assets/logo-element-black.png';
 import LogoFemale from '../../assets/logo-element-female.png';
@@ -21,6 +23,7 @@ import LogoFemale from '../../assets/logo-element-female.png';
 export const Header:React.FC = () => {
     const {themeName, setThemeName} = useContext(ThemeContext);
     const [currentLogo, setCurrentLogo ] = useState<string>(Logo);
+    const [showMobileMenu, sertShowMobileMenu] = useState(false);
 
     useEffect(() => {
         setCurrentLogo( themeName === 'male' ? Logo : LogoFemale)
@@ -62,7 +65,8 @@ export const Header:React.FC = () => {
                                 <img src={currentLogo} alt="Logo Element" />
                             </a>
                         </div>
-                        <HeaderNavLinks>
+                        <SandwichMenu onClick={() => sertShowMobileMenu(true) } size={32}  />
+                        <HeaderNavLinks showMobileMenu={showMobileMenu} >
                             <ul>
                                 <li><a href="/"> Shop </a></li>
                                 <li><a href="/"> Blog </a></li>
@@ -71,6 +75,7 @@ export const Header:React.FC = () => {
                                 <li><a href="/"> História </a></li>
                             </ul>
                             <Input />
+                            <CloseMenu onClick={() => sertShowMobileMenu(false)} size={28} />
                         </HeaderNavLinks>
                     </FlexBetweenBox>
                 </Center>

@@ -18,4 +18,6 @@ export const StyledInput = styled.input`
 export const Icon = styled(CaretRightFill)`
     position: absolute;
     right: 10px;
+    cursor: pointer;
+
 `;

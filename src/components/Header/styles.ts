@@ -1,5 +1,6 @@
-import styled from "styled-components";
-
+import styled, {css} from "styled-components";
+import { Menu } from '@styled-icons/boxicons-regular/Menu';
+import { Close } from '@styled-icons/evaicons-solid/Close';
 
 export const Container = styled.header`
     width: 100%;
@@ -36,6 +37,13 @@ export const UserAreaNav = styled(FlexBetweenBox)`
     button:first-of-type {
         margin-right: 10px;
     }
+
+    @media screen and (max-width: 640px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+
+    }
 `;
 
 interface ThemeNameProps {
@@ -59,7 +67,7 @@ export const UserAreaNavButton =  styled.button<ThemeNameProps>`
 `;
 
 
-export const UserAreaNavLinks =  styled.div`
+export const UserAreaNavLinks =  styled.nav`
     ul {
         display: flex;
         li {
@@ -71,7 +79,7 @@ export const UserAreaNavLinks =  styled.div`
                 background: transparent;
                 cursor: pointer;
                 &:hover {
-                    color: ${props => props.theme.colors.onPrimary};
+                    color: ${props => props.theme.colors.onSecondary};
                 }
             }
             &:not(:last-of-type) {
@@ -86,12 +94,48 @@ export const HeaderNav = styled.div`
     padding: 20px;
 `;
 
-export const HeaderNavLogo = styled.div`
+export const SandwichMenu = styled(Menu)`
+    color: ${props => props.theme.colors.onSecondary};
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: 910px) {
+        display: block;
+    }
 `;
 
-export const HeaderNavLinks = styled.nav`
+export const CloseMenu = styled(Close)`
+    color: ${props => props.theme.colors.onSecondary};
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    @media screen and (max-width: 910px) {
+        display: block;
+    }
+`;
+
+interface HeaderNavLinksProps {
+    showMobileMenu: boolean;
+}
+export const HeaderNavLinks = styled.nav<HeaderNavLinksProps>`
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 910px) {
+        flex-direction: column-reverse;
+        position: fixed;
+        background: ${props => props.theme.colors.secondary};
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        justify-content: fle  x-end;
+        align-items: flex-start;
+        padding: 15px;
+        transition: all .3s ease;
+        ${props => props.showMobileMenu ? css`transform:translateX(0%)` : css`transform:translateX(100%)` }
+    }
 
     ul {
         display: flex;
@@ -102,6 +146,7 @@ export const HeaderNavLinks = styled.nav`
                 color: ${props => props.theme.colors.onSecondary};
                 font-size: 1.7rem;
                 transition: color .3s ease;
+                text-transform: uppercase;
                 &:hover {
                     color: ${props => props.theme.colors.onSecondary};
                 }
@@ -111,5 +156,21 @@ export const HeaderNavLinks = styled.nav`
                 margin-right: 30px;
             }
         }
+        @media screen and (max-width: 910px) {
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1;
+            margin-top: 15px;
+            li {
+                a {
+                    padding: 15px 0;
+                    display: block;
+                }
+                &:not(:last-of-type) {
+                    margin-right: 0px;
+                }
+            }
+        }
+
     }
 `;
