@@ -1,11 +1,14 @@
-import { Title } from './styles';
+import { Title } from "./styles";
 
 interface IProps {
-    title: string,
+  title: string;
 }
 
-export const SectionTitle:React.FC<IProps> = ({ title }) => {
-    return (
-        <Title> <span>{ title } </span> </Title>
-    )
-}
+export const SectionTitle: React.FC<IProps> = ({ title }) => {
+  return (
+    <Title>
+      {" "}
+      <span>{title} </span>{" "}
+    </Title>
+  );
+};

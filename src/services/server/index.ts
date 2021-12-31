@@ -1,11 +1,12 @@
-import { createServer, Factory, Model } from 'miragejs';
-import faker from 'faker';
+/* eslint-disable import/no-extraneous-dependencies */
+import { createServer, Factory, Model } from "miragejs";
+import faker from "faker";
 
 export type Category = {
-  id: number,
-  categoryTitle: string,
-  image: string,
-}
+  id: number;
+  categoryTitle: string;
+  image: string;
+};
 
 export type Product = {
   id: number;
@@ -14,11 +15,11 @@ export type Product = {
   price: string;
   parcels: string;
   promo: string;
-  image: string,
-}
+  image: string;
+};
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default function() {
+export default function () {
   createServer({
     models: {
       product: Model.extend<Partial<Product>>({}),
@@ -26,11 +27,11 @@ export default function() {
     },
     factories: {
       product: Factory.extend({
-        id(i: number){
+        id(i: number) {
           return `prod-${i}`;
         },
         tag: "Novo",
-        productName:() => faker.commerce.productName(),
+        productName: () => faker.commerce.productName(),
         price: faker.commerce.price(),
         parcels: "10x sem juros de R$ 37,99",
         promo: "à vista com até 5% de desconto",
@@ -38,23 +39,23 @@ export default function() {
       }),
       category: Factory.extend({
         id(id: number) {
-          return `cat-${id}`
+          return `cat-${id}`;
         },
-        categoryTitle:() => faker.commerce.department(),
+        categoryTitle: () => faker.commerce.department(),
         image: () => faker.image.sports(350, 355),
-      })
+      }),
     },
     seeds(server) {
-      server.createList('product', 10);
-      server.createList('category', 6);
+      server.createList("product", 10);
+      server.createList("category", 6);
     },
     routes() {
-      this.namespace = "api"
+      this.namespace = "api";
       // GET's
-      this.get('/products', (schema, request) => {
-        return schema.all('product')
+      this.get("/products", (schema, request) => {
+        return schema.all("product");
       });
-      this.get('/categories')
+      this.get("/categories");
       //POST's
       /**
        * this.post('/product', (schema, request) => {
@@ -64,5 +65,5 @@ export default function() {
         });
        */
     },
-  })
+  });
 }
