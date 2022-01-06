@@ -43,7 +43,9 @@
          "no-shadow": "off",
          "no-empty-function": "off",
          "@typescript-eslint/no-empty-function": ["error"],
-         "spaced-comment": "off"
+         "spaced-comment": "off",
+         "no-use-before-define": "off",
+         "@typescript-eslint/explicit-module-boundary-types": "off"
     },
     "settings": {
         "import/resolver": {

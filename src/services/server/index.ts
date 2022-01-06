@@ -19,6 +19,7 @@ export type Product = {
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
+// eslint-disable-next-line func-names
 export default function () {
   createServer({
     models: {
@@ -52,7 +53,7 @@ export default function () {
     routes() {
       this.namespace = "api";
       // GET's
-      this.get("/products", (schema, request) => {
+      this.get("/products", (schema) => {
         return schema.all("product");
       });
       this.get("/categories");

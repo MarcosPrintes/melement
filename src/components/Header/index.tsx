@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { useContext, useState, useEffect } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { ShoppingCart } from "@styled-icons/entypo/ShoppingCart";
@@ -67,10 +68,7 @@ export const Header: React.FC = () => {
                     <a href="/"> Nossas lojas </a>
                   </li>
                   <li>
-                    <button
-                      type="button"
-                      onClick={() => alert("popup de carrinho em construção")}
-                    >
+                    <button type="button" onClick={() => {}}>
                       <ShoppingCart size={12} /> Carrinho (0)
                     </button>
                   </li>

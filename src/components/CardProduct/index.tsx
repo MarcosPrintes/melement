@@ -1,17 +1,12 @@
+import { Product } from "../../services/server";
 import { Card } from "./styles";
 
-interface IProps {
-  product: {
-    tag: string | undefined;
-    productName: string;
-    price: string;
-    parcels: string;
-    promo: string;
-    image: string;
-  };
+export interface IProps {
+  product: Product;
+  onQuickview: (prod: Product) => void;
 }
 
-export const CardProduct: React.FC<IProps> = ({ product }) => {
+export const CardProduct: React.FC<IProps> = ({ product, onQuickview }) => {
   const { tag, parcels, price, promo, productName, image } = product;
 
   return (
@@ -19,9 +14,8 @@ export const CardProduct: React.FC<IProps> = ({ product }) => {
       <div>
         <img src={image} alt="Procut thumb" />
         <div className="tag"> {tag} </div>
-        <button onClick={() => alert("Em construção ...")} type="button">
-          {" "}
-          Quickview{" "}
+        <button onClick={() => onQuickview(product)} type="button">
+          Quickview
         </button>
       </div>
       <div>
