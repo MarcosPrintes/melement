@@ -34,7 +34,7 @@
         "import/no-named-as-default-member": "off",
         "import/named": "off",
         "import/order": "off",
-        "prettier/prettier": ["error", {"singleQuote": true, "parser": "typescript"}],
+        "prettier/prettier": ["warn", {"singleQuote": true, "parser": "typescript"}],
         "import/prefer-default-export": "off",
         "import/no-useless-path-segments": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
@@ -52,9 +52,9 @@
         "react/jsx-no-constructed-context-values": "off",
         "spaced-comment": "off",
         "no-shadow": "off",
-        "react/jsx-filename-extension": [ 2, { "extensions": [".ts", ".tsx"] }],
+        "react/jsx-filename-extension": [ 2, { "extensions": [".ts", ".tsx", ".js", ".jsx"] }],
         "import/extensions": [
-            "error",
+            "off",
             "ignorePackages",
             {
               "js": "never",
