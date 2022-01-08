@@ -52,7 +52,9 @@
         "react/jsx-no-constructed-context-values": "off",
         "spaced-comment": "off",
         "no-shadow": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
         "react/jsx-filename-extension": [ 2, { "extensions": [".ts", ".tsx", ".js", ".jsx"] }],
+        "func-names": "off",
         "import/extensions": [
             "off",
             "ignorePackages",
