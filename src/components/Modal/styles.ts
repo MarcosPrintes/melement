@@ -26,6 +26,25 @@ export const Content = styled.div`
   border-radius: 8px;
   background: ${props => props.theme.colors.background};
   position: relative;
+  display: flex;
+  align-items: center;
+`;
+
+export const Image = styled.div`
+  margin-right: 1rem;
+`;
+export const Informations = styled.div`
+  margin-left: 1rem;
+
+  p {
+    margin: 15px 0;
+    font-weight: 900;
+  }
+
+  img {
+    max-width: 60px;
+    border: 2px solid #000;
+  }
 `;
 
 export const Button = styled.button`

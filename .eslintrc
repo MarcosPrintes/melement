@@ -55,16 +55,7 @@
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "react/jsx-filename-extension": [ 2, { "extensions": [".ts", ".tsx", ".js", ".jsx"] }],
         "func-names": "off",
-        "import/extensions": [
-            "off",
-            "ignorePackages",
-            {
-              "js": "never",
-              "jsx": "never",
-              "ts": "never",
-              "tsx": "never"
-            }
-         ]
+        "import/extensions": "off"
     },
     "settings": {
         "import/parsers": {

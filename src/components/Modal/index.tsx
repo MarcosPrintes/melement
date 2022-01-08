@@ -1,6 +1,6 @@
 import { Product } from '../../services/server';
 
-import { Button, Container, Content } from './styles';
+import { Button, Container, Content, Image, Informations } from './styles';
 
 interface ModalProps {
   product: Product;
@@ -11,12 +11,20 @@ interface ModalProps {
 export const Modal = ({
   onClose,
   visible,
-  product: { productName },
+  product: { productName, image, price },
 }: ModalProps) => {
   return (
     <Container onClick={() => onClose()} visible={visible}>
       <Content onClick={e => e.stopPropagation()}>
-        <h1>{productName}</h1>
+        <Image>
+          <img src={image} alt="" />
+        </Image>
+        <Informations>
+          <h1>{productName}</h1>
+          <p> {`R$ ${price}`} </p>
+          <img src={image} alt={productName} />
+        </Informations>
+
         <Button onClick={() => onClose()}> X </Button>
       </Content>
     </Container>
