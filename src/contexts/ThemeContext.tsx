@@ -1,10 +1,10 @@
-import { createContext, useState, useEffect } from "react";
-import { ThemeProvider } from "styled-components";
-import { MaleTheme, FemaleTheme } from "../style/themes";
+import { createContext, useState, useEffect } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { MaleTheme, FemaleTheme } from '../style/themes';
 
 interface ThemeData {
   themeName: string;
-  setThemeName: (themeName: "male" | "female") => void;
+  setThemeName: (themeName: 'male' | 'female') => void;
 }
 
 const themes = {
@@ -13,14 +13,14 @@ const themes = {
 };
 
 export const ThemeContext = createContext<ThemeData>({
-  themeName: "male",
+  themeName: 'male',
   setThemeName: () => {
-    return "male";
+    return 'male';
   },
 });
 
 export const ThemeContextProvider: React.FC = ({ children }) => {
-  const [themeName, setThemeName] = useState<"male" | "female">("male");
+  const [themeName, setThemeName] = useState<'male' | 'female'>('male');
   const [currentTheme, setCurrentTheme] = useState(MaleTheme);
 
   useEffect(() => {
@@ -28,7 +28,6 @@ export const ThemeContextProvider: React.FC = ({ children }) => {
   }, [themeName]);
 
   return (
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
     <ThemeContext.Provider value={{ themeName, setThemeName }}>
       <ThemeProvider theme={currentTheme}>{children}</ThemeProvider>
     </ThemeContext.Provider>

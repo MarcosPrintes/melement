@@ -1,5 +1,5 @@
-export { MaleTheme } from "./male";
-export { FemaleTheme } from "./female";
+export { MaleTheme } from './male';
+export { FemaleTheme } from './female';
 export interface ThemeColors {
   primary: string;
   primaryDark?: string;
@@ -23,7 +23,7 @@ export interface Colors {
   colors: ThemeColors;
 }
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
     name: string;
     colors: ThemeColors;

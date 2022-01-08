@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-import { useContext, useState, useEffect } from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { ShoppingCart } from "@styled-icons/entypo/ShoppingCart";
-import { Input } from "../Input";
-import { ThemeContext } from "../../contexts/ThemeContext";
+import { useContext, useState, useEffect } from 'react';
+import { ShoppingCart } from '@styled-icons/entypo/ShoppingCart';
+import { Input } from '../Input';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 import {
   Container,
@@ -17,11 +15,11 @@ import {
   UserAreaNavLinks,
   SandwichMenu,
   WarningTop,
-} from "./styles";
-import { Center } from "../Layout/styles";
+} from './styles';
+import { Center } from '../Layout/styles';
 
-import Logo from "../../assets/logo-element-black.png";
-import LogoFemale from "../../assets/logo-element-female.png";
+import Logo from '../../assets/logo-element-black.png';
+import LogoFemale from '../../assets/logo-element-female.png';
 
 export const Header: React.FC = () => {
   const { themeName, setThemeName } = useContext(ThemeContext);
@@ -29,7 +27,7 @@ export const Header: React.FC = () => {
   const [showMobileMenu, sertShowMobileMenu] = useState(false);
 
   useEffect(() => {
-    setCurrentLogo(themeName === "male" ? Logo : LogoFemale);
+    setCurrentLogo(themeName === 'male' ? Logo : LogoFemale);
   }, [themeName]);
 
   return (
@@ -44,18 +42,18 @@ export const Header: React.FC = () => {
           <UserAreaNav>
             <div>
               <UserAreaNavButton
-                isActive={themeName === "male"}
-                onClick={() => setThemeName("male")}
+                isActive={themeName === 'male'}
+                onClick={() => setThemeName('male')}
               >
-                {" "}
-                Masculino{" "}
+                {' '}
+                Masculino{' '}
               </UserAreaNavButton>
               <UserAreaNavButton
-                isActive={themeName === "female"}
-                onClick={() => setThemeName("female")}
+                isActive={themeName === 'female'}
+                onClick={() => setThemeName('female')}
               >
-                {" "}
-                Feminino{" "}
+                {' '}
+                Feminino{' '}
               </UserAreaNavButton>
             </div>
             <div>

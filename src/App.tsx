@@ -1,6 +1,6 @@
-import Layout from "./components/Layout/index";
-import { Home } from "./pages/Home";
-import { ThemeContextProvider } from "./contexts/ThemeContext";
+import Layout from './components/Layout/index';
+import { Home } from './pages/Home';
+import { ThemeContextProvider } from './contexts/ThemeContext';
 
 function App() {
   return (

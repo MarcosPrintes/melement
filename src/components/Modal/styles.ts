@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface ContainerProps {
   visible: boolean;
@@ -15,7 +15,7 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: ${({ visible }) => (visible ? "auto" : "none")};
+  pointer-events: ${({ visible }) => (visible ? 'auto' : 'none')};
   opacity: ${({ visible }) => (visible ? 1 : 0)};
   transition: all 0.3s ease;
 `;
@@ -24,7 +24,7 @@ export const Content = styled.div`
   min-width: 420px;
   padding: 30px;
   border-radius: 8px;
-  background: ${(props) => props.theme.colors.background};
+  background: ${props => props.theme.colors.background};
   position: relative;
 `;
 

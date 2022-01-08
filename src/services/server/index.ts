@@ -1,6 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import { createServer, Factory, Model } from "miragejs";
-import faker from "faker";
+import { createServer, Factory, Model } from 'miragejs';
+import faker from 'faker';
 
 export type Category = {
   id: number;
@@ -18,8 +17,6 @@ export type Product = {
   image: string;
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
-// eslint-disable-next-line func-names
 export default function () {
   createServer({
     models: {
@@ -31,11 +28,11 @@ export default function () {
         id(i: number) {
           return `prod-${i}`;
         },
-        tag: "Novo",
+        tag: 'Novo',
         productName: () => faker.commerce.productName(),
         price: faker.commerce.price(),
-        parcels: "10x sem juros de R$ 37,99",
-        promo: "à vista com até 5% de desconto",
+        parcels: '10x sem juros de R$ 37,99',
+        promo: 'à vista com até 5% de desconto',
         image: faker.image.sports(255, 270),
       }),
       category: Factory.extend({
@@ -47,16 +44,16 @@ export default function () {
       }),
     },
     seeds(server) {
-      server.createList("product", 10);
-      server.createList("category", 6);
+      server.createList('product', 10);
+      server.createList('category', 6);
     },
     routes() {
-      this.namespace = "api";
+      this.namespace = 'api';
       // GET's
-      this.get("/products", (schema) => {
-        return schema.all("product");
+      this.get('/products', schema => {
+        return schema.all('product');
       });
-      this.get("/categories");
+      this.get('/categories');
       //POST's
       /**
        * this.post('/product', (schema, request) => {

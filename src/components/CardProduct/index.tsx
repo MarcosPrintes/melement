@@ -1,5 +1,5 @@
-import { Product } from "../../services/server";
-import { Card } from "./styles";
+import { Product } from '../../services/server';
+import { Card } from './styles';
 
 export interface IProps {
   product: Product;
@@ -10,7 +10,7 @@ export const CardProduct: React.FC<IProps> = ({ product, onQuickview }) => {
   const { tag, parcels, price, promo, productName, image } = product;
 
   return (
-    <Card href="#">
+    <Card>
       <div>
         <img src={image} alt="Procut thumb" />
         <div className="tag"> {tag} </div>
@@ -20,7 +20,7 @@ export const CardProduct: React.FC<IProps> = ({ product, onQuickview }) => {
       </div>
       <div>
         <p className="card__title"> {productName} </p>
-        <p className="card__price"> {`R$ ${price.replaceAll(".", ",")}`} </p>
+        <p className="card__price"> {`R$ ${price.replaceAll('.', ',')}`} </p>
         <p className="card__parcels"> {parcels} </p>
         <p className="card__promo"> {promo} </p>
       </div>

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Card = styled.a`
+export const Card = styled.div`
   display: inline-block;
   //overflow: hidden;
   width: 255px;
@@ -13,8 +13,8 @@ export const Card = styled.a`
   .tag {
     display: inline-flex;
     padding: 3px 15px;
-    background: ${(props) => props.theme.colors.background};
-    color: ${(props) => props.theme.colors.onBackground};
+    background: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.onBackground};
     position: absolute;
     top: 15px;
     left: 15px;
@@ -24,9 +24,9 @@ export const Card = styled.a`
   }
 
   button {
-    background-color: ${(props) => props.theme.colors.error};
+    background-color: ${props => props.theme.colors.error};
     border: none;
-    color: ${(props) => props.theme.colors.onError};
+    color: ${props => props.theme.colors.onError};
     display: inline-flex;
     padding: 15px 25px;
     position: absolute;
@@ -37,13 +37,13 @@ export const Card = styled.a`
     opacity: 0;
     transition: all 0.2s ease;
     &:hover {
-      color: ${(props) => props.theme.colors.primary};
+      color: ${props => props.theme.colors.primary};
       opacity: 1;
     }
   }
 
   p {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primary};
     margin-bottom: 3px;
   }
 
@@ -62,9 +62,9 @@ export const Card = styled.a`
     &__promo {
       font-size: 1rem;
       font-weight: 400;
-      color: ${(props) => props.theme.colors.primaryLight};
+      color: ${props => props.theme.colors.primaryLight};
       span {
-        color: ${(props) => props.theme.colors.error};
+        color: ${props => props.theme.colors.error};
       }
     }
   }

@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Card = styled.a`
-  background: ${(props) => props.theme.colors.background};
+  background: ${props => props.theme.colors.background};
   width: 350px;
   height: 355px;
   display: inline-flex;
@@ -16,7 +16,7 @@ export const Card = styled.a`
     justify-content: center;
     padding: 15px 10px;
     background: rgba(0, 0, 0, 0.8);
-    color: ${(props) => props.theme.colors.onPrimary};
+    color: ${props => props.theme.colors.onPrimary};
     font-size: 2rem;
     text-transform: uppercase;
   }

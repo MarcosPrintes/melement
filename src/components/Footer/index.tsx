@@ -1,9 +1,9 @@
-import { Container, CopyRight } from "./styles";
-import { Center } from "../Layout/styles";
-import facebook from "../../assets/icons/ic-facebook.svg";
-import twitter from "../../assets/icons/ic-twitter.svg";
-import youtube from "../../assets/icons/ic-youtube.svg";
-import instagram from "../../assets/icons/ic-instagram.svg";
+import { Container, CopyRight } from './styles';
+import { Center } from '../Layout/styles';
+import facebook from '../../assets/icons/ic-facebook.svg';
+import twitter from '../../assets/icons/ic-twitter.svg';
+import youtube from '../../assets/icons/ic-youtube.svg';
+import instagram from '../../assets/icons/ic-instagram.svg';
 
 export const Footer: React.FC = () => {
   return (
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
           </div>
           <div className="footer__block">
             <p>
-              Estamos nisso juntos. Uma mensagem do nosso time sobre o COVID-19.{" "}
+              Estamos nisso juntos. Uma mensagem do nosso time sobre o COVID-19.{' '}
               <a href="google.com"> Leia aqui</a>.
             </p>
             <div>
@@ -76,25 +76,25 @@ export const Footer: React.FC = () => {
               <ul className="footer__social">
                 <li>
                   <a href="google.com" target="_blank">
-                    {" "}
+                    {' '}
                     <img src={facebook} alt="Facebook" />
                   </a>
                 </li>
                 <li>
                   <a href="google.com" target="_blank">
-                    {" "}
-                    <img src={twitter} alt="Twitter" />{" "}
+                    {' '}
+                    <img src={twitter} alt="Twitter" />{' '}
                   </a>
                 </li>
                 <li>
                   <a href="google.com" target="_blank">
-                    {" "}
+                    {' '}
                     <img src={youtube} alt="Youtube" />
                   </a>
                 </li>
                 <li>
                   <a href="google.com" target="_blank">
-                    {" "}
+                    {' '}
                     <img src={instagram} alt="Instagram" />
                   </a>
                 </li>
@@ -104,7 +104,7 @@ export const Footer: React.FC = () => {
           <div className="footer__block">
             <div> Contato </div>
             <p>
-              Atendimento das 08h as 17h <br /> de 2ª a 6ª. Sábados, domingos{" "}
+              Atendimento das 08h as 17h <br /> de 2ª a 6ª. Sábados, domingos{' '}
               <br /> e feriados não temos <br /> atendimento Exclusivo para
               compras <br /> online. (11) 3618-8600 <br /> sac@elementbrand.com
             </p>

@@ -1,19 +1,19 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Title = styled.h1`
   text-align: center;
   margin: 60px 0;
   span {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primary};
     font-size: 2.2rem;
     display: inline-block;
     position: relative;
     &::before,
     &::after {
-      content: "";
+      content: '';
       width: 100px;
       height: 1px;
-      background: ${(props) => props.theme.colors.primary};
+      background: ${props => props.theme.colors.primary};
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

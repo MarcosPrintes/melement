@@ -48,18 +48,18 @@
     "@miragejs/graphql": "^0.1.13",
     "@types/faker": "^5.5.8",
     "@types/styled-components": "^5.1.13",
-    "@typescript-eslint/eslint-plugin": "^5.8.0",
-    "@typescript-eslint/parser": "^5.8.1",
-    "eslint-config-airbnb": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "faker": "^5.5.3",
     "miragejs": "^0.1.41",
-    "prettier": "^2.5.1"
+    "prettier": "2.5.1"
   }
 }

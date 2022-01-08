@@ -24,9 +24,9 @@
         "prettier"
     ],
     "rules": {
-        "import/no-unresolved": "error",
+        "import/no-unresolved": "warn",
         "import/extensions":[
-            "error",
+            "warn",
             "ignorePackages",
             {
               "js": "never",
@@ -42,7 +42,7 @@
          "react/prop-types": "off",
          "no-shadow": "off",
          "no-empty-function": "off",
-         "@typescript-eslint/no-empty-function": ["error"],
+         "@typescript-eslint/no-empty-function": ["warn"],
          "spaced-comment": "off",
          "no-use-before-define": "off",
          "@typescript-eslint/explicit-module-boundary-types": "off"

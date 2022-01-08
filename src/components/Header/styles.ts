@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import styled, { css } from "styled-components";
-import { Menu } from "@styled-icons/boxicons-regular/Menu";
-import { Close } from "@styled-icons/evaicons-solid/Close";
+import styled, { css } from 'styled-components';
+import { Menu } from '@styled-icons/boxicons-regular/Menu';
+import { Close } from '@styled-icons/evaicons-solid/Close';
 
 export const Container = styled.header`
   width: 100%;
@@ -12,19 +12,19 @@ export const Container = styled.header`
 `;
 
 export const WarningTop = styled.div`
-  background: ${(props) => props.theme.colors.error};
+  background: ${props => props.theme.colors.error};
   padding: 5px 0;
 
   span {
     display: block;
-    color: ${(props) => props.theme.colors.onError};
+    color: ${props => props.theme.colors.onError};
     text-align: center;
     font-size: 1.4rem;
   }
 `;
 
 export const UserArea = styled.div`
-  background: ${(props) => props.theme.colors.primaryLight};
+  background: ${props => props.theme.colors.primaryLight};
   padding: 10px;
 `;
 
@@ -51,11 +51,11 @@ interface ThemeNameProps {
 }
 
 export const UserAreaNavButton = styled.button<ThemeNameProps>`
-  background: ${(props) =>
+  background: ${props =>
     props.isActive
       ? props.theme.colors.background
       : props.theme.colors.primaryLight};
-  color: ${(props) =>
+  color: ${props =>
     props.isActive
       ? props.theme.colors.onBackground
       : props.theme.colors.onPrimaryLight};
@@ -67,8 +67,8 @@ export const UserAreaNavButton = styled.button<ThemeNameProps>`
   transition: all 0.3s ease;
   &:hover {
     border: 1px solid rgba(255, 255, 255, 0.3);
-    color: ${(props) => props.theme.colors.onSecondary};
-    background: ${(props) => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.onSecondary};
+    background: ${props => props.theme.colors.secondary};
   }
 `;
 
@@ -78,14 +78,14 @@ export const UserAreaNavLinks = styled.nav`
     li {
       a,
       button {
-        color: ${(props) => props.theme.colors.onPrimary};
+        color: ${props => props.theme.colors.onPrimary};
         font-size: 1.6rem;
         transition: color 0.3s ease;
         border: none;
         background: transparent;
         cursor: pointer;
         &:hover {
-          color: ${(props) => props.theme.colors.onSecondary};
+          color: ${props => props.theme.colors.onSecondary};
         }
       }
       &:not(:last-of-type) {
@@ -96,12 +96,12 @@ export const UserAreaNavLinks = styled.nav`
 `;
 
 export const HeaderNav = styled.div`
-  background: ${(props) => props.theme.colors.secondary};
+  background: ${props => props.theme.colors.secondary};
   padding: 20px;
 `;
 
 export const SandwichMenu = styled(Menu)`
-  color: ${(props) => props.theme.colors.onSecondary};
+  color: ${props => props.theme.colors.onSecondary};
   cursor: pointer;
   display: none;
   @media screen and (max-width: 910px) {
@@ -110,7 +110,7 @@ export const SandwichMenu = styled(Menu)`
 `;
 
 export const CloseMenu = styled(Close)`
-  color: ${(props) => props.theme.colors.onSecondary};
+  color: ${props => props.theme.colors.onSecondary};
   cursor: pointer;
   display: none;
   position: absolute;
@@ -131,7 +131,7 @@ export const HeaderNavLinks = styled.nav<HeaderNavLinksProps>`
   @media screen and (max-width: 910px) {
     flex-direction: column-reverse;
     position: fixed;
-    background: ${(props) => props.theme.colors.secondary};
+    background: ${props => props.theme.colors.secondary};
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -140,7 +140,7 @@ export const HeaderNavLinks = styled.nav<HeaderNavLinksProps>`
     align-items: flex-start;
     padding: 15px;
     transition: all 0.3s ease;
-    ${(props) =>
+    ${props =>
       props.showMobileMenu
         ? css`
             transform: translateX(0%);
@@ -156,12 +156,12 @@ export const HeaderNavLinks = styled.nav<HeaderNavLinksProps>`
     margin-right: 15px;
     li {
       a {
-        color: ${(props) => props.theme.colors.onSecondary};
+        color: ${props => props.theme.colors.onSecondary};
         font-size: 1.7rem;
         transition: color 0.3s ease;
         text-transform: uppercase;
         &:hover {
-          color: ${(props) => props.theme.colors.onSecondary};
+          color: ${props => props.theme.colors.onSecondary};
         }
       }
 

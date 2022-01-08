@@ -1,4 +1,4 @@
-import { GridContainer } from "./styles";
+import { GridContainer } from './styles';
 
 interface IProps {
   columns: number;

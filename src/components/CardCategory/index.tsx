@@ -1,4 +1,4 @@
-import { Card } from "./styes";
+import { Card } from './styes';
 
 interface IProps {
   category: {
